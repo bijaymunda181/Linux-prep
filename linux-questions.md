@@ -39,3 +39,45 @@
 9️⃣ What’s the difference between a primary group and a secondary group?
 
 🔟 How can you create a new user and make sure their primary group is developers?
+
+## Process management
+1️⃣ How do you check all currently running processes in your system?
+
+2️⃣ How do you find the process ID (PID) of a specific service, for example sshd?
+
+3️⃣ What command will you use to terminate a process by PID?
+
+4️⃣ What is the difference between kill, killall, and pkill commands?
+
+5️⃣ How can you see processes of a specific user, for example bijay?
+
+6️⃣ How do you check the top resource-consuming processes in real time?
+
+7️⃣ How can you send a process to the background and bring it back to the foreground?
+
+8️⃣ What’s the difference between a zombie process and an orphan process?
+
+9️⃣ How can you change the priority (nice value) of a running process?
+
+🔟 A process with PID 5678 is stuck — how can you forcefully kill it?
+
+## Disk Management
+1️⃣ How do you check the list of all disks and partitions available on your Linux system?
+
+2️⃣ How can you create a new partition on a disk (for example, /dev/sdb)?
+
+3️⃣ After creating a new partition, how do you format it with the ext4 filesystem?
+
+4️⃣ How do you mount a partition (e.g., /dev/sdb1) permanently to /data directory?
+
+5️⃣ How do you check disk space usage for all mounted filesystems?
+
+6️⃣ How can you see which directory is using the most space in /var?
+
+7️⃣ How do you extend a partition or logical volume when it’s running out of space?
+
+8️⃣ How do you check inode usage on your filesystem?
+
+9️⃣ What command is used to check and repair filesystem errors?
+
+🔟 How do you unmount a filesystem safely before making changes or removing a disk?
