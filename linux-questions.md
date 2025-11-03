@@ -102,3 +102,4 @@
 9. What’s the use of the /etc/yum.repos.d/ directory?
 
 10. How do you clean the yum cache, and why would you do that?
+
