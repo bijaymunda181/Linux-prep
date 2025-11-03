@@ -84,14 +84,8 @@
 
 ## Package Management 
 1. What is the difference between rpm and yum commands in RHEL/CentOS?
-</br>
-A: rpm installs packages manually and doesn’t handle dependencies, while yum automatically resolves and installs dependencies.
 
 2. How can you check if a package is already installed on your system?
-   </br>
-A: rpm -q packagename
-   </br>
-or yum list installed | grep packagename
 
 3. How do you find which package provides a specific file (for example, /usr/bin/ls)?
 
