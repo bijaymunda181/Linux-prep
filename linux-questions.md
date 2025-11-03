@@ -81,3 +81,28 @@
 9️⃣ What command is used to check and repair filesystem errors?
 
 🔟 How do you unmount a filesystem safely before making changes or removing a disk?
+
+## Package Management 
+1. What is the difference between rpm and yum commands in RHEL/CentOS?
+A rpm installs packages manually and doesn’t handle dependencies, while yum automatically resolves and installs dependencies.
+
+2. How can you check if a package is already installed on your system?
+A rpm -q packagename
+
+or yum list installed | grep packagename
+
+3. How do you find which package provides a specific file (for example, /usr/bin/ls)?
+
+4. What’s the difference between yum install and yum localinstall?
+
+5. How do you list all installed packages and filter by a specific keyword?
+
+6. What command do you use to remove a package and its dependencies?
+
+7. How does dnf differ from yum?
+
+8. If your system cannot access the internet, how would you install packages using a local repository?
+
+9. What’s the use of the /etc/yum.repos.d/ directory?
+
+10. How do you clean the yum cache, and why would you do that?
