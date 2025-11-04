@@ -183,17 +183,5 @@ Server becomes isolated from other networks (including Internet).
 
 Static IP won’t auto-update gateway → Manual update needed.
 
-## 6. Command to check which interface is used for internet routing?
-ip route
 
-
-Look for:
-
-default via <gateway> dev <interface>
-
-## 7. DHCP server down — who gets affected? Static or Dynamic?
-
-Only Dynamic (DHCP) clients.
-
-Static IP devices continue working.
 

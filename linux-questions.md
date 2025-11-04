@@ -102,4 +102,74 @@
 9. What’s the use of the /etc/yum.repos.d/ directory?
 
 10. How do you clean the yum cache, and why would you do that?
+ 
+## ✅ Section 1: Static And Dynamic Connections
+## 1. Command to check which interface is used for internet routing?
+ip route
+
+
+Look for:
+
+default via <gateway> dev <interface>
+
+## 2. DHCP server down — who gets affected? Static or Dynamic?
+
+Only Dynamic (DHCP) clients.
+
+Static IP devices continue working.
+
+## 3. Set static IP using nmcli
+nmcli con add con-name static-ens34 ifname ens34 type ethernet ipv4.method manual ipv4.address 192.168.1.50/24 ipv4.gateway 192.168.1.1 ipv4.dns 8.8.8.8
+nmcli con up static-ens34
+
+## 4. Switch back from static to DHCP
+nmcli con mod ens34 ipv4.method auto
+nmcli con up ens34
+
+## 5. Check active connection vs connected device
+
+Active connection profiles:
+
+nmcli con show --active
+
+
+Device level status:
+
+nmcli device status
+
+## 6. Can one NIC have both static and DHCP IP?
+
+Yes. A single NIC can have multiple IPs, but:
+
+Only one default gateway is used
+
+Not recommended without advanced routing setup
+
+Command:
+
+nmcli con add con-name secondary-ip ifname ens34 type ethernet ipv4.address 192.168.1.60/24
+
+
+## 7. What decides which interface is used for routing?
+
+Routing table metrics (priority).
+
+Command:
+
+ip route
+
+
+Lower metric = higher priority.
+
+## 8. Remove DNS from static configuration — internet gone? Why?
+
+Yes — you can reach IPs but not domain names.
+
+Example:
+
+ping 8.8.8.8 ✅
+ping google.com ❌
+
+
+DNS resolves domain → IP.
 
