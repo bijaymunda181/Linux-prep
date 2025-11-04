@@ -191,3 +191,9 @@ Look for:
 
 default via <gateway> dev <interface>
 
+## 7. DHCP server down — who gets affected? Static or Dynamic?
+
+Only Dynamic (DHCP) clients.
+
+Static IP devices continue working.
+
