@@ -134,3 +134,12 @@ Step	Command	Purpose
 1	`lsof	grep deleted`
 2	cp /proc/<PID>/fd/<FD> /path/to/file	Recover the deleted file
 3	> filename	Truncate safely instead of deleting
+
+## ✅ Section 1: Static And Dynamic Connections
+ ## 1. Your SSH session disconnects when you down one interface. Why?
+
+Because SSH is using that interface as the default route.
+When the interface goes down, route disappears → SSH loses connection.
+
+✅ Key concept: Internet/SSH traffic flows through the interface with the default gateway.
+
