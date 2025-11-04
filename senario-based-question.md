@@ -150,3 +150,31 @@ If ens33 has default route and you down ens34, what happens?
 Nothing. SSH still stays connected.
 
 Because traffic was not using ens34 in the first place.
+
+## 3. "Internet not working after static IP configuration" — possible reasons
+
+Gateway missing or wrong
+
+DNS missing or wrong
+
+Wrong subnet mask
+
+IP conflict in network
+
+✅ Remember: Static IP = you must define IP + Gateway + DNS
+
+## 4. Static IP configured, but still getting DHCP address. Why?
+
+Because DHCP connection profile (or autoconnect) is still active.
+
+Fix:
+
+nmcli con down "DHCP-connection"
+nmcli con up "static-connection"
+
+
+Or disable autoconnect on DHCP:
+
+nmcli con mod "DHCP-connection" connection.autoconnect no
+
+## 
