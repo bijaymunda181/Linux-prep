@@ -143,3 +143,10 @@ When the interface goes down, route disappears → SSH loses connection.
 
 ✅ Key concept: Internet/SSH traffic flows through the interface with the default gateway.
 
+## 2. Two NICs: ens33 = DHCP, ens34 = Static
+
+If ens33 has default route and you down ens34, what happens?
+
+Nothing. SSH still stays connected.
+
+Because traffic was not using ens34 in the first place.
