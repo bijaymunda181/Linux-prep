@@ -177,4 +177,17 @@ Or disable autoconnect on DHCP:
 
 nmcli con mod "DHCP-connection" connection.autoconnect no
 
-## 
+## 5. Server uses static IP but network team changes gateway. What happens?
+
+Server becomes isolated from other networks (including Internet).
+
+Static IP won’t auto-update gateway → Manual update needed.
+
+## 6. Command to check which interface is used for internet routing?
+ip route
+
+
+Look for:
+
+default via <gateway> dev <interface>
+
