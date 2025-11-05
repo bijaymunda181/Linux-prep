@@ -269,3 +269,18 @@ crontab -e
 */10 * * * * /path/script.sh >> /tmp/script.log 2>&1
 
 ## 🔥 Question 7: A script runs manually but does NOT run in cron. What could be the reason, and how do you fix it?
+"A script may run manually but fail in cron because cron does not load user PATH variables.
+Fix it by using full paths of commands or exporting PATH inside the script."
+
+✅ Additional Valid Causes (your points)
+
+user doesn't have permission to run script
+
+script not executable
+
+ownership issue
+
+Commands to fix:
+
+chmod +x /script.sh
+chown bijay:bijay /script.sh
