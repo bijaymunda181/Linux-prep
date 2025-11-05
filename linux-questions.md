@@ -213,3 +213,5 @@ System crontab (/etc/crontab):
 
 30 2 * * * root /scripts/backup.sh
 
+## 🔥 Question 4: How do you list cron jobs for a specific user?
+The command crontab -l -u username (or short form crontab -lu username) is used to list cron jobs of a specific user.
