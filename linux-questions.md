@@ -179,3 +179,5 @@ DNS resolves domain → IP.
 
 Cron (crond) is a background service used in Linux to schedule recurring tasks.
 Crontab (cron table) is a file/command used to create and manage those scheduled jobs.
+
+## 🔥 Question 2: Where are user cron jobs stored in Linux?
