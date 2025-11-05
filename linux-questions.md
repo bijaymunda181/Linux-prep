@@ -3,23 +3,53 @@
    useradd -m -s /bin/bash username
 
 
-2. How can you change the username of an existing user in your system?
+## 2. How can you change the username of an existing user in your system?
+usermod -l newname oldname
 
-3. Suppose you want to delete a user along with their home directory — which command will you use?
 
-4. How do you lock and unlock a user account in Linux?
+## 3. Suppose you want to delete a user along with their home directory — which command will you use?
+userdel -r username
 
-5. A user’s home directory is full, and you need to move it to a new location — how would you do that?
+## 4. How do you lock and unlock a user account in Linux?
+usermod -L username   # Lock the account  
+usermod -U username   # Unlock the account
 
-6. How can you check the UID, GID, and group memberships of a particular user?
 
-7. What’s the difference between /etc/passwd and /etc/shadow files?
+## 5. A user’s home directory is full, and you need to move it to a new location — how would you do that?
+usermod -d /new/home/dir -m username
+-m → moves the contents from the old home directory to the new one
 
-8. How do you set a password expiration policy for a user so they must change it every 30 days?
+## 6. How can you check the UID, GID, and group memberships of a particular user?
+id username
 
-9. How can you check when a user last changed their password?
 
-10. If a user forgets their password, how do you reset it safely without deleting the account?
+## 7. What’s the difference between /etc/passwd and /etc/shadow files?
+/etc/passwd → Stores basic user account information, such as:
+
+username:x:UID:GID:comment:home_directory:login_shell
+
+
+🔹 Readable by all users.
+🔹 The x indicates that the password is stored securely in /etc/shadow.
+
+/etc/shadow → Stores secure password details, including:
+
+username:encrypted_password:last_change:min:max:warn:inactive:expire
+
+
+🔒 Only readable by the root user.
+
+## 8. How do you set a password expiration policy for a user so they must change it every 30 days?
+chage -M 30 username
+
+
+## 9. How can you check when a user last changed their password?
+chage -l username
+
+
+## 10. If a user forgets their password, how do you reset it safely without deleting the account?
+passwd username
+
 
 ## Group Management
 1️⃣ How do you create a new group named devops?
