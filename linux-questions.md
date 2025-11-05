@@ -199,6 +199,7 @@ Example for user bijay:
 
 ## 🔥 Question 3: What is the difference between crontab -e and editing /etc/crontab?
 crontab -e is used to create user-specific cron jobs. The jobs are stored in /var/spool/cron/<username>.
+
 Editing /etc/crontab is for system-wide cron jobs and requires specifying the user who will run the job.
 Example difference:
 
