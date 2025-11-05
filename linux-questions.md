@@ -330,3 +330,16 @@ Example:
 
 
 This keeps the job but stops it from running.
+
+## 🔥 Question 13: User bijay should not create cron jobs. How do you block this user from doing so?
+To block user bijay from creating cron jobs, add their username to the file /etc/cron.deny:
+
+echo "bijay" | sudo tee -a /etc/cron.deny
+
+
+✅ This prevents the user from using the crontab command.
+
+## 🔥 Question 13:
+
+
+
