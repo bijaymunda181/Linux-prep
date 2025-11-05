@@ -173,3 +173,7 @@ ping google.com ❌
 
 DNS resolves domain → IP.
 
+## Cronjob
+🔥 Question 1:
+
+What is crontab and why is it used?
