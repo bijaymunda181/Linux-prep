@@ -181,3 +181,19 @@ Cron (crond) is a background service used in Linux to schedule recurring tasks.
 Crontab (cron table) is a file/command used to create and manage those scheduled jobs.
 
 ## 🔥 Question 2: Where are user cron jobs stored in Linux?
+User crontab files are stored in:
+
+/var/spool/cron/
+
+
+(or on some systems)
+
+/var/spool/cron/crontabs/
+
+Example for user bijay:
+
+/var/spool/cron/bijay
+
+
+/etc/crontab is the system-wide cron file, not the user crontab.
+
