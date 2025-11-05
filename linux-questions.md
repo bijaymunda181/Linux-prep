@@ -326,7 +326,7 @@ Then add your cron job there.
 To disable a cron job without deleting it, you can comment it out by adding a # at the beginning of the line in the crontab.
 Example:
 
-# 0 5 * * * /path/to/script.sh
+ " # 0 5 * * * /path/to/script.sh "
 
 
 This keeps the job but stops it from running.
