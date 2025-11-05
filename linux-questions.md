@@ -215,3 +215,8 @@ System crontab (/etc/crontab):
 
 ## 🔥 Question 4: How do you list cron jobs for a specific user?
 The command crontab -l -u username (or short form crontab -lu username) is used to list cron jobs of a specific user.
+
+## 🔥 Question 5: How do you remove all cron jobs for the current user?
+To remove all cron jobs for the current user:
+
+crontab -r
