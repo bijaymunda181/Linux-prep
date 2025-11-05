@@ -284,3 +284,6 @@ Commands to fix:
 
 chmod +x /script.sh
 chown bijay:bijay /script.sh
+
+## 🔥 Question 8: You want to run a cron job every minute. Write the cron expression. 
+*/1 * * * * /path/to/script will run the job every 1 minute.
