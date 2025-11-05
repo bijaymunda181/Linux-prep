@@ -340,6 +340,11 @@ echo "bijay" | sudo tee -a /etc/cron.deny
 ✅ This prevents the user from using the crontab command.
 
 ## 🔥 Question 14:A job must run on the first day of every month at 5 AM.
+0 5 1 * * command
+
+## 🔥 Question 15: A job should run every 15 minutes between 9 AM and 6 PM.
+*/15 9-18 * * * command
+
 
 
 
