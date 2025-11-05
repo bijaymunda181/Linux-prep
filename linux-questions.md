@@ -267,3 +267,5 @@ crontab -e
 7. Redirect output / errors to log file
 
 */10 * * * * /path/script.sh >> /tmp/script.log 2>&1
+
+## 🔥 Question 7: A script runs manually but does NOT run in cron. What could be the reason, and how do you fix it?
