@@ -1,5 +1,5 @@
 ## User Management
-1. How do you create a new user in Linux with a home directory and default shell as /bin/bash?
+## 1. How do you create a new user in Linux with a home directory and default shell as /bin/bash?
    useradd -m -s /bin/bash username
 
 
