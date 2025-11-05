@@ -198,4 +198,16 @@ Example for user bijay:
 /etc/crontab is the system-wide cron file, not the user crontab.
 
 ## 🔥 Question 3: What is the difference between crontab -e and editing /etc/crontab?
+crontab -e is used to create user-specific cron jobs. The jobs are stored in /var/spool/cron/<username>.
+Editing /etc/crontab is for system-wide cron jobs and requires specifying the user who will run the job.
+Example difference:
+
+User crontab (crontab -e):
+
+30 2 * * * /scripts/backup.sh
+
+
+System crontab (/etc/crontab):
+
+30 2 * * * root /scripts/backup.sh
 
