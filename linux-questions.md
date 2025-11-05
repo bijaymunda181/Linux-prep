@@ -197,3 +197,5 @@ Example for user bijay:
 
 /etc/crontab is the system-wide cron file, not the user crontab.
 
+## 🔥 Question 3: What is the difference between crontab -e and editing /etc/crontab?
+
