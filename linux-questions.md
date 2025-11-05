@@ -287,3 +287,11 @@ chown bijay:bijay /script.sh
 
 ## 🔥 Question 8: You want to run a cron job every minute. Write the cron expression. 
 */1 * * * * /path/to/script will run the job every 1 minute.
+
+## 🔥 Question 9: You want to run a script every day at 02:30 AM.
+30 2 * * * /path/to/script
+
+## 🔥 Question 10: A cron script needs environment variables (for example JAVA_HOME),
+## but cron doesn’t read .bash_profile or .bashrc.
+
+Where do you set environment variables for cron jobs?
