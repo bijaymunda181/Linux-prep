@@ -174,9 +174,8 @@ ping google.com ❌
 DNS resolves domain → IP.
 
 ## Cronjob
-## 🔥 Question 1:
+## 🔥 Question 1 : What is crontab and why is it used?
 
-What is crontab and why is it used?
 
 Cron (crond) is a background service used in Linux to schedule recurring tasks.
 Crontab (cron table) is a file/command used to create and manage those scheduled jobs.
