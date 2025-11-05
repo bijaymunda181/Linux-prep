@@ -220,3 +220,50 @@ The command crontab -l -u username (or short form crontab -lu username) is used 
 To remove all cron jobs for the current user:
 
 crontab -r
+
+## 🔥 Question 6: A cron job is not running. How will you troubleshoot it?
+Troubleshooting steps when a cron job is not running:
+
+1. Check if cron service is running
+
+systemctl status crond
+
+
+If stopped:
+
+systemctl start crond
+
+2. Check cron logs
+
+For RHEL/CentOS/Alma/Rocky:
+
+cat /var/log/cron
+
+
+For Ubuntu/Debian:
+
+grep CRON /var/log/syslog
+
+3. Ensure the script has execute permission
+
+chmod +x /path/script.sh
+
+4. Use full path of binaries in script
+Example inside the script:
+
+/usr/bin/rsync
+/usr/bin/tar
+
+5. Check user permissions / ownership
+
+chown user:user /path/script.sh
+
+6. Check cron syntax
+
+crontab -e
+
+* * * * * /path/script.sh   ✅ valid
+
+7. Redirect output / errors to log file
+
+*/10 * * * * /path/script.sh >> /tmp/script.log 2>&1
