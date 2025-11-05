@@ -291,7 +291,33 @@ chown bijay:bijay /script.sh
 ## 🔥 Question 9: You want to run a script every day at 02:30 AM.
 30 2 * * * /path/to/script
 
-## 🔥 Question 10: A cron script needs environment variables (for example JAVA_HOME),
-## but cron doesn’t read .bash_profile or .bashrc.
+## 🔥 Question 10: A cron script needs environment variables (for example JAVA_HOME),but cron doesn’t read .bash_profile or .bashrc.Where do you set environment variables for cron jobs?
+Environment variables for cron jobs can be set in:
 
-Where do you set environment variables for cron jobs?
+1. Inside the script itself (recommended)
+
+2. At the top of the crontab file
+
+✅ Example 1: Export variables inside the script
+
+Edit your script:
+
+#!/bin/bash
+JAVA_HOME=/usr/lib/jvm/java-11
+PATH=$PATH:$JAVA_HOME/bin
+
+# your script commands
+java -version
+
+
+## 🔥 Question 10: Your cron job needs to run as root. How do you schedule it? 
+This way the cron job doesn't depend on user login environment
+
+Add it to the root user’s crontab using:
+
+sudo crontab -e
+
+
+Then add your cron job there.
+
+✅ This ensures the job runs with root privileges.
