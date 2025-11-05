@@ -310,7 +310,7 @@ PATH=$PATH:$JAVA_HOME/bin
 java -version
 
 
-## 🔥 Question 10: Your cron job needs to run as root. How do you schedule it? 
+## 🔥 Question 11: Your cron job needs to run as root. How do you schedule it? 
 This way the cron job doesn't depend on user login environment
 
 Add it to the root user’s crontab using:
@@ -321,3 +321,12 @@ sudo crontab -e
 Then add your cron job there.
 
 ✅ This ensures the job runs with root privileges.
+
+## 🔥 Question 12: You want to disable a cron job without deleting it. What do you do?
+To disable a cron job without deleting it, you can comment it out by adding a # at the beginning of the line in the crontab.
+Example:
+
+'# 0 5 * * * /path/to/script.sh'
+
+
+This keeps the job but stops it from running.
