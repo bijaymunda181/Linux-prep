@@ -233,3 +233,16 @@ systemctl status logrotate.timer
 → On systemd systems, logrotate runs via timer, not service.
 
 ## 2.You have a custom application generating logs at: </br> /app/logs/app.log </br>Rotate it daily, keep last 7 logs, compress them, and use copytruncate.
+So the correct configuration block should be:
+
+/app/logs/app.log {
+daily
+rotate 7
+compress
+copytruncate
+}
+
+
+And yes, you would place this block inside a new file under:
+
+/etc/logrotate.d/
