@@ -231,3 +231,4 @@ systemctl status logrotate.timer
 
 
 → On systemd systems, logrotate runs via timer, not service.
+

@@ -463,4 +463,9 @@ logrotate /etc/logrotate.conf
 ## 🔥 Question 12: What does the missingok option do in logrotate?
 If the log file does not exist, do not show an error, just continue execution.
 
+## 🔥 Question 13: In logrotate, what is the difference between daily, weekly, and monthly?
+- daily → rotate logs every day
 
+- weekly → rotate logs every week
+
+- monthly → rotate logs every month
