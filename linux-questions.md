@@ -452,4 +452,5 @@ So your answer was on the right track ✅
 
 This file keeps track of when each log file was last rotated so logrotate knows whether to rotate again or not.
 
-
+## 🔥 Question 10: How can you run logrotate manually (command to trigger it)?
+logrotate /etc/logrotate.conf
