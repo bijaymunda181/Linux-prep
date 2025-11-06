@@ -384,6 +384,27 @@ Logrotate is a Linux utility used to automatically manage log files by rotating,
 ## 🔥 Question 2: Where is the main configuration file of logrotate located in Linux?
 /etc/logrotate.conf
 
+## 🔥 Question 3: Where do applications place their individual logrotate configuration files?
+/etc/logrotate.d/
+
+## 🔥 Question 4: What does the rotate option do in logrotate?
+rotate 5 means logrotate will keep 5 old rotated log files and delete the older ones.
+Example:
+
+myapp.log
+
+myapp.log.1
+
+myapp.log.2
+
+myapp.log.3
+
+myapp.log.4
+
+myapp.log.5 ← last one kept
+
+Anything older than this will be removed.
+
 
 
 
