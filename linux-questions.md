@@ -444,4 +444,12 @@ compress compresses the rotated log file (usually into .gz) to save disk space.
 
 So your answer was on the right track ✅
 
+## 🔥 Question 9: Where does logrotate store its state information (i.e., when logs were last rotated)?
+✅ Logrotate stores its state information in this file:
+
+/var/lib/logrotate/logrotate.status
+
+
+This file keeps track of when each log file was last rotated so logrotate knows whether to rotate again or not.
+
 
