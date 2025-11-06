@@ -183,5 +183,51 @@ Server becomes isolated from other networks (including Internet).
 
 Static IP won’t auto-update gateway → Manual update needed.
 
+## Logrotate
+## 1. A log file is not rotating even though logrotate configuration is correct. What steps will you take to troubleshoot logrotate issues?
+Troubleshooting steps when logrotate is not rotating logs:
+
+1. Run logrotate in debug mode
+
+logrotate -d /etc/logrotate.conf
+
+→ Shows what logrotate will do, without rotating logs.
+
+2. Forcefully rotate logs
+
+logrotate -f /etc/logrotate.conf
+
+3. Check logrotate state file
+
+cat /var/lib/logrotate/logrotate.status
 
 
+→ See when it last rotated logs.
+
+4. Validate configuration syntax
+
+logrotate -d /etc/logrotate.d/appname
+
+
+→ Checks for config errors.
+
+5. Check log permissions and ownership
+
+ls -l /var/log/app.log
+
+
+→ If logrotate doesn’t have write permission, rotation fails.
+
+6. Check if the application holds the file open
+
+lsof /var/log/app.log
+
+
+→ If the file is open, you may need copytruncate.
+
+7. Verify cron / systemd timer is running
+
+systemctl status logrotate.timer
+
+
+→ On systemd systems, logrotate runs via timer, not service.

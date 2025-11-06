@@ -459,3 +459,8 @@ logrotate /etc/logrotate.conf
 - postrotate → Specifies commands that should run after log rotation happens.
 
 - endscript → Marks the end of that script block.
+
+## 🔥 Question 12: What does the missingok option do in logrotate?
+If the log file does not exist, do not show an error, just continue execution.
+
+
