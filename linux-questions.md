@@ -414,5 +414,14 @@ Anything older than this will be removed.
 - maxsize:-	Rotate the log immediately if it grows larger than this size, even if the scheduled time (daily/weekly) has not arrived.
 
 ## 🔥 Question 6: What is copytruncate used for in logrotate?
+copytruncate is used when the application cannot be restarted or reloaded during log rotation.
+
+How it works:
+
+1. logrotate copies the current log file to a new rotated file.
+
+2. Then it truncates (empties) the original log file so the application can continue writing to it.
+
+So, instead of renaming the file, it makes a copy and then clears the original.
 
 
