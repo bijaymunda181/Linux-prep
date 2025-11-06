@@ -481,15 +481,25 @@ If the log file does not exist, do not show an error, just continue execution.
 Example:
 
 /var/log/myapp.log {
+
 daily
+
 rotate 7
+
 compress
+
 prerotate
+
 echo "Rotation starting..."
+
 endscript
+
 postrotate
+
 systemctl reload myapp
+
 endscript
+
 }
 
 - prerotate → prints message before rotation
