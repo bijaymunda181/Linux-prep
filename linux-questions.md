@@ -470,4 +470,5 @@ If the log file does not exist, do not show an error, just continue execution.
 
 - monthly → rotate logs every month
 
+## 🔥 Question 14: What is the purpose of sharedscripts in logrotate?
 

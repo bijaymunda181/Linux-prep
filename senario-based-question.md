@@ -248,6 +248,17 @@ copytruncate
 }
 
 
-And yes, you would place this block inside a new file under:
+## 3.What happens if a log file is deleted manually but the application is still running? Will logrotate free disk space? Why or why not?
+✅ Explanation:
 
-/etc/logrotate.d/
+- If a log file is deleted manually while the application is still running and has the file open, the disk space is not freed immediately.
+
+- The file descriptor is still held by the process, so the space is used until the application closes or restarts.
+
+- Logrotate also cannot rotate a deleted file, because it doesn’t exist.
+
+How to fix:
+
+1. Restart the application to release the file descriptor.
+
+2. Or use copytruncate in logrotate so the original file can be emptied without restarting
