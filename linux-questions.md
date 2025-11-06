@@ -53,25 +53,57 @@ passwd username
 
 
 ## Group Management
-1️⃣ How do you create a new group named devops?
+## 1️⃣ How do you create a new group named devops?
+groupadd devops
 
-2️⃣ How can you rename an existing group from devops to adminteam?
+## 2️⃣ How can you rename an existing group from devops to adminteam?
+groupmod -l adminteam devops
 
-3️⃣ A user bijay needs to be added to the group adminteam — how do you do it?
 
-4️⃣ How do you remove the user bijay from the group adminteam?
+## 3️⃣ A user bijay needs to be added to the group adminteam — how do you do it?
+gpasswd -a bijay admin
 
-5️⃣ How can you change the group ID (GID) of a group named developers to 1050?
+usermod -aG adminteam bijay
 
-6️⃣ Which file contains information about groups in Linux?
+## 4️⃣ How do you remove the user bijay from the group adminteam?
+gpasswd -d bijay adminteam
 
-7️⃣ How do you check which groups a user bijay belongs to?
+deluser bijay adminteam
 
-8️⃣ How do you set the group ownership of a file named project.txt to devops?
 
-9️⃣ What’s the difference between a primary group and a secondary group?
+## 5️⃣ How can you change the group ID (GID) of a group named developers to 1050?
+groupmod -g 1050 developers
 
-🔟 How can you create a new user and make sure their primary group is developers?
+## 6️⃣ Which file contains information about groups in Linux?
+/etc/group
+
+## 7️⃣ How do you check which groups a user bijay belongs to?
+id bijay
+
+groups bijay
+
+## 8️⃣ How do you set the group ownership of a file named project.txt to devops?
+chown :devops project.txt
+
+chgrp devops project.txt
+
+## 9️⃣ What’s the difference between a primary group and a secondary group?
+✅ Difference between primary and secondary groups:
+
+- Primary group → The main group assigned to a user when the account is created. Files created by the user default to this group.
+
+- Secondary group(s) → Additional groups the user belongs to, giving extra permissions to access files or directories.
+
+Example:
+
+- User bijay’s primary group → developers
+
+- Secondary groups → adminteam, devops
+
+Files created by bijay will have developers as the group unless changed.
+
+## 🔟 How can you create a new user and make sure their primary group is developers?
+useradd -g developers username
 
 ## Process management
 1️⃣ How do you check all currently running processes in your system?
