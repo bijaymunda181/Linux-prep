@@ -408,8 +408,9 @@ Anything older than this will be removed.
 
 ## 🔥 Question 5: What is the difference between size and maxsize options in logrotate?
 ✅ Difference between size and maxsize in logrotate:
-Option	Meaning
+
 size	Rotate the log only when the log file reaches that size. (Example: size 100M)
+
 maxsize	Rotate the log immediately if it grows larger than this size, even if the scheduled time (daily/weekly) has not arrived.
 
 
