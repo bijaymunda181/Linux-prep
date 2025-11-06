@@ -17,6 +17,7 @@ usermod -U username   # Unlock the account
 
 ## 5. A user’s home directory is full, and you need to move it to a new location — how would you do that?
 usermod -d /new/home/dir -m username
+
 -m → moves the contents from the old home directory to the new one
 
 ## 6. How can you check the UID, GID, and group memberships of a particular user?
