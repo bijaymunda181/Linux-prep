@@ -106,25 +106,69 @@ Files created by bijay will have developers as the group unless changed.
 useradd -g developers username
 
 ## Process management
-1️⃣ How do you check all currently running processes in your system?
+## 1️⃣ How do you check all currently running processes in your system?
+ps aux
 
-2️⃣ How do you find the process ID (PID) of a specific service, for example sshd?
+top
 
-3️⃣ What command will you use to terminate a process by PID?
+## 2️⃣ How do you find the process ID (PID) of a specific service, for example sshd?
+pidof sshd
 
-4️⃣ What is the difference between kill, killall, and pkill commands?
+ps aux | grep sshd
 
-5️⃣ How can you see processes of a specific user, for example bijay?
+## 3️⃣ What command will you use to terminate a process by PID?
+kill <pid>
 
-6️⃣ How do you check the top resource-consuming processes in real time?
+## 4️⃣ What is the difference between kill, killall, and pkill commands?
+| Command     | How it works                                                                                         |
+| ----------- | ---------------------------------------------------------------------------------------------------- |
+| **kill**    | Terminates a process by **PID**. Example: `kill 1234`                                                |
+| **killall** | Terminates **all processes with the given name**. Example: `killall sshd` kills all `sshd` processes |
+| **pkill**   | Kills processes **by name or pattern**. Example: `pkill sshd`                                        |
 
-7️⃣ How can you send a process to the background and bring it back to the foreground?
+## 5️⃣ How can you see processes of a specific user, for example bijay?
+ps aux | grep bijay
 
-8️⃣ What’s the difference between a zombie process and an orphan process?
+pgrep -u bijay
 
-9️⃣ How can you change the priority (nice value) of a running process?
 
-🔟 A process with PID 5678 is stuck — how can you forcefully kill it?
+## 6️⃣ How do you check the top resource-consuming processes in real time?
+top
+
+- Shows processes in real-time with CPU, memory, and other stats.
+ 
+- Extra tips:
+
+- Press Shift + P → sorts processes by CPU usage
+
+- Press Shift + M → sorts by memory usage
+
+## 7️⃣ How can you send a process to the background and bring it back to the foreground?
+
+
+## 8️⃣ What’s the difference between a zombie process and an orphan process?
+| Type       | What it is                                                                                      | Key Point                                                |
+| ---------- | ----------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| **Zombie** | A process that has **finished execution**, but its **parent has not yet read its exit status**. | It still exists in the **process table**, but it’s dead. |
+| **Orphan** | A process whose **parent has terminated**, but the child is still running.                      | The **init/systemd process (PID 1)** adopts it.          |
+
+Example:
+
+- Zombie → Process finished, still showing in ps with <defunct>
+
+- Orphan → Long-running child of a dead parent, now adopted by init
+
+## 9️⃣ How can you change the priority (nice value) of a running process?
+renice -n <nice value> <PID>
+
+For Example:
+
+renice -n -5 1234
+
+
+
+## 🔟 A process with PID 5678 is stuck — how can you forcefully kill it?
+kill -9 5678
 
 ## Disk Management
 1️⃣ How do you check the list of all disks and partitions available on your Linux system?
