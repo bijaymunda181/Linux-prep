@@ -425,5 +425,23 @@ How it works:
 So, instead of renaming the file, it makes a copy and then clears the original.
 
 ## 🔥 Question 7: What does the compress option do in logrotate?
+compress compresses the rotated log file (usually into .gz) to save disk space.
+
+## 🔥 Question 8: What is the difference between create and copytruncate?
+1. create
+
+- After rotating the old log file (by renaming it), logrotate creates a new empty log file with the same name.
+
+- The application starts writing into the new file.
+
+- Usually used when the application can handle file rotation (reopens log file automatically).
+
+2. copytruncate
+
+- Logrotate copies the log contents to a new rotated file and then truncates (empties) the original file.
+
+- Used when the application keeps the log file open and cannot be restarted/reloaded.
+
+So your answer was on the right track ✅
 
 
