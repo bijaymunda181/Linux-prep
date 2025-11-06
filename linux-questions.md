@@ -377,6 +377,9 @@ echo "bijay" | sudo tee -a /etc/cron.deny
 ## 🔥 Question 15: A job should run every 15 minutes between 9 AM and 6 PM.
 */15 9-18 * * * command
 
+## Logrotate
+## 🔥 Question 1: What is logrotate and why do we use it in Linux?
+
 
 
 
