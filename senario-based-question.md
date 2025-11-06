@@ -262,3 +262,33 @@ How to fix:
 1. Restart the application to release the file descriptor.
 
 2. Or use copytruncate in logrotate so the original file can be emptied without restarting
+
+## 4.You have Nginx logs that must be rotated without restarting Nginx. </br>Which logrotate option will you use and why?
+✅ Rotating Nginx logs without restarting:
+
+- Use the copytruncate option in logrotate.
+
+Why?
+
+- Nginx keeps the log file open while running.
+
+- Normally, logrotate renames the log file, but Nginx will continue writing to the old (renamed) file, so new logs may be lost.
+
+- copytruncate copies the log contents to a rotated file and then empties the original file.
+
+- This way, Nginx continues writing to the same file without needing a restart.
+
+Example:
+
+/var/log/nginx/access.log /var/log/nginx/error.log {
+
+daily
+
+rotate 7
+
+compress
+
+copytruncate
+
+}
+

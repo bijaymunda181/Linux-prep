@@ -471,4 +471,27 @@ If the log file does not exist, do not show an error, just continue execution.
 - monthly → rotate logs every month
 
 ## 🔥 Question 14: What is the purpose of sharedscripts in logrotate?
+✅ Difference between prerotate and postrotate:
 
+| Option       | When it runs                       | Purpose                                                                                                              |
+| ------------ | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `prerotate`  | **Before** the log file is rotated | Run commands **before rotation**, e.g., stopping a service or backing up files                                       |
+| `postrotate` | **After** the log file is rotated  | Run commands **after rotation**, e.g., restarting or reloading a service so it can start writing to the new log file |
+
+Example:
+
+/var/log/myapp.log {
+daily
+rotate 7
+compress
+prerotate
+echo "Rotation starting..."
+endscript
+postrotate
+systemctl reload myapp
+endscript
+}
+
+- prerotate → prints message before rotation
+
+- postrotate → reloads the service after rotation
