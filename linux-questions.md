@@ -424,4 +424,6 @@ How it works:
 
 So, instead of renaming the file, it makes a copy and then clears the original.
 
+## 🔥 Question 7: What does the compress option do in logrotate?
+
 
