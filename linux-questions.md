@@ -381,6 +381,9 @@ echo "bijay" | sudo tee -a /etc/cron.deny
 ## 🔥 Question 1: What is logrotate and why do we use it in Linux?
 Logrotate is a Linux utility used to automatically manage log files by rotating, compressing, deleting, or mailing them to prevent log files from consuming too much disk space.
 
+## 🔥 Question 2: Where is the main configuration file of logrotate located in Linux?
+/etc/logrotate.conf
+
 
 
 
