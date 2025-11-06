@@ -159,7 +159,7 @@ Example:
 - Orphan → Long-running child of a dead parent, now adopted by init
 
 ## 9️⃣ How can you change the priority (nice value) of a running process?
-renice -n <nice value> <PID>
+renice -n nice-value PID
 
 For Example:
 
