@@ -454,3 +454,8 @@ This file keeps track of when each log file was last rotated so logrotate knows 
 
 ## 🔥 Question 10: How can you run logrotate manually (command to trigger it)?
 logrotate /etc/logrotate.conf
+
+## 🔥 Question 11: What is postrotate / endscript used for in logrotate?
+- postrotate → Specifies commands that should run after log rotation happens.
+
+- endscript → Marks the end of that script block.
