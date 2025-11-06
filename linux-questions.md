@@ -389,6 +389,7 @@ Logrotate is a Linux utility used to automatically manage log files by rotating,
 
 ## 🔥 Question 4: What does the rotate option do in logrotate?
 rotate 5 means logrotate will keep 5 old rotated log files and delete the older ones.
+
 Example:
 
 myapp.log
