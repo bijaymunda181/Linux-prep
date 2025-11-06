@@ -236,10 +236,15 @@ systemctl status logrotate.timer
 So the correct configuration block should be:
 
 /app/logs/app.log {
+
 daily
+
 rotate 7
+
 compress
+
 copytruncate
+
 }
 
 
