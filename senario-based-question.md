@@ -232,3 +232,7 @@ systemctl status logrotate.timer
 
 → On systemd systems, logrotate runs via timer, not service.
 
+## 2.You have a custom application generating logs at: </br> /app/logs/app.log
+
+
+Rotate it daily, keep last 7 logs, compress them, and use copytruncate.
