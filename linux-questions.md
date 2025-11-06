@@ -413,6 +413,6 @@ Anything older than this will be removed.
 
 - maxsize:-	Rotate the log immediately if it grows larger than this size, even if the scheduled time (daily/weekly) has not arrived.
 
-
+## 🔥 Question 6: What is copytruncate used for in logrotate?
 
 
