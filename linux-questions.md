@@ -172,6 +172,9 @@ kill -9 5678
 
 ## Disk Management
 1️⃣ How do you check the list of all disks and partitions available on your Linux system?
+By the command 
+fdisk -l
+lablk
 
 2️⃣ How can you create a new partition on a disk (for example, /dev/sdb)?
 
