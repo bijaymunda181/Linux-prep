@@ -213,9 +213,17 @@ For permanent mount we have to make a entry in /etc/fstab file
 
 /dev/sdb1   /data   ext4    defaults    0   0
 
-5️⃣ How do you check disk space usage for all mounted filesystems?
+## 5️⃣ How do you check disk space usage for all mounted filesystems?
+df -hT
 
-6️⃣ How can you see which directory is using the most space in /var?
+## 6️⃣ How can you see which directory is using the most space in /var?
+Navigate to the /var directory by the command
+
+cd /var
+
+then run the command
+
+du -sh * | sort -nr 
 
 7️⃣ How do you extend a partition or logical volume when it’s running out of space?
 
