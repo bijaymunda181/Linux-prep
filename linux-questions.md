@@ -226,7 +226,41 @@ then run the command
 du -sh * | sort -nr 
 
 ## 7️⃣ How do you extend a partition or logical volume when it’s running out of space?
+1. For normal partitions (non-LVM):
 
+- You cannot directly extend it unless you have free unallocated space next to it.
+
+- You’d use tools like parted or gparted to resize the partition.
+
+- Then you resize the filesystem using:
+
+resize2fs /dev/sda1
+
+2. For LVM-based partitions:
+
+i. **Check current logical volumes and free space:**
+
+lvs
+
+vgs
+
+ii. **If there is free space in the VG, extend the LV:**
+
+sudo lvextend -L +5G /dev/vgname/lvname
+
+**or to use all free space:**
+
+sudo lvextend -l +100%FREE /dev/vgname/lvname
+
+**Resize the filesystem:**
+
+For ext4:
+
+sudo resize2fs /dev/vgname/lvname
+
+For xfs:
+
+sudo xfs_growfs /mountpoint
 
 ## 8️⃣ How do you check inode usage on your filesystem?
 df -i 
