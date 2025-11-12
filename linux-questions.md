@@ -301,7 +301,22 @@ Save and exit the file
 umount mount-point
 
 ## Package Management 
-1. What is the difference between rpm and yum commands in RHEL/CentOS?
+## 1. What is the difference between rpm and yum commands in RHEL/CentOS?
+- rpm (Red Hat Package Manager):
+- 
+Used for installing, uninstalling, and querying individual .rpm packages.
+
+It does not automatically handle dependencies — you must install all required packages manually.
+
+sudo rpm -ivh package.rpm
+
+- yum (Yellowdog Updater Modified):
+
+A high-level package manager built on top of rpm.
+
+It can automatically resolve and install dependencies from configured repositories.
+
+sudo yum install package-name
 
 2. How can you check if a package is already installed on your system?
 
