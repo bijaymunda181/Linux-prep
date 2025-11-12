@@ -171,7 +171,7 @@ renice -n -5 1234
 kill -9 5678
 
 ## Disk Management
-1️⃣ How do you check the list of all disks and partitions available on your Linux system?
+## 1️⃣ How do you check the list of all disks and partitions available on your Linux system?
 
 By the command 
 
@@ -179,7 +179,32 @@ fdisk -l
 
 lablk
 
-2️⃣ How can you create a new partition on a disk (for example, /dev/sdb)?
+## 2️⃣ How can you create a new partition on a disk (for example, /dev/sdb)?
+1. Open the disk in fdisk
+
+fdisk /dev/sdb
+
+2. **Create a new partition**
+
+Inside fdisk, follow these steps:
+
+- Press n → to create a new partition
+
+- Choose p → for a primary partition (or e for extended)
+
+- Select the partition number (e.g., 1)
+
+- Set the first sector (press Enter to use default)
+
+- Set the last sector or size (e.g., +5G for 5GB)
+
+3. **Write changes to disk**
+
+After defining the partition:
+
+- Press w → to write the partition table and exit.
+
+
 
 3️⃣ After creating a new partition, how do you format it with the ext4 filesystem?
 
