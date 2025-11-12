@@ -318,9 +318,11 @@ It can automatically resolve and install dependencies from configured repositori
 
 sudo yum install package-name
 
-2. How can you check if a package is already installed on your system?
+## 2. How can you check if a package is already installed on your system?
+rpm -q <package-name>
 
-3. How do you find which package provides a specific file (for example, /usr/bin/ls)?
+yum installed list | grep `<package-name>`
+## 3. How do you find which package provides a specific file (for example, /usr/bin/ls)?
 
 4. What’s the difference between yum install and yum localinstall?
 
