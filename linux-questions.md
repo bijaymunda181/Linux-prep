@@ -225,11 +225,23 @@ then run the command
 
 du -sh * | sort -nr 
 
-7️⃣ How do you extend a partition or logical volume when it’s running out of space?
+## 7️⃣ How do you extend a partition or logical volume when it’s running out of space?
 
-8️⃣ How do you check inode usage on your filesystem?
 
-9️⃣ What command is used to check and repair filesystem errors?
+## 8️⃣ How do you check inode usage on your filesystem?
+df -i 
+
+- df → shows filesystem disk usage.
+
+- -i → displays inode usage instead of block (disk) usage.
+
+## 9️⃣ What command is used to check and repair filesystem errors?
+fsck command
+
+Example:
+
+- sudo fsck /dev/sda1
+
 
 🔟 How do you unmount a filesystem safely before making changes or removing a disk?
 
