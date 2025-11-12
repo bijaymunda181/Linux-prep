@@ -277,8 +277,24 @@ Example:
 - sudo fsck /dev/sda1
 
 
-🔟 How do you unmount a filesystem safely before making changes or removing a disk?
+## 🔟 How do you unmount a filesystem safely before making changes or removing a disk?
+🧩 If it’s a Permanent Mount (Defined in /etc/fstab)
 
+**Unmount the filesystem**
+
+sudo umount /mnt/data
+
+**Edit the /etc/fstab file**
+
+Open the file:
+
+sudo vi /etc/fstab
+
+Then remove or comment out (add a # at the beginning) the entry related to that mount point:
+
+#UUID=xxxx-xxxx  /mnt/data  ext4  defaults  0 0
+
+Save and exit the file
 ## Package Management 
 1. What is the difference between rpm and yum commands in RHEL/CentOS?
 
