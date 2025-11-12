@@ -295,6 +295,11 @@ Then remove or comment out (add a # at the beginning) the entry related to that 
 #UUID=xxxx-xxxx  /mnt/data  ext4  defaults  0 0
 
 Save and exit the file
+
+Non permanent mount
+
+umount mount-point
+
 ## Package Management 
 1. What is the difference between rpm and yum commands in RHEL/CentOS?
 
