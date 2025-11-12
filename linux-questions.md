@@ -296,7 +296,7 @@ Then remove or comment out (add a # at the beginning) the entry related to that 
 
 Save and exit the file
 
-Non permanent mount
+**Non permanent mount**
 
 umount mount-point
 
