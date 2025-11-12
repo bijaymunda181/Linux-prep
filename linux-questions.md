@@ -205,10 +205,13 @@ After defining the partition:
 - Press w → to write the partition table and exit.
 
 
+## 3️⃣ After creating a new partition, how do you format it with the ext4 filesystem?
+mkfs.ext4 /dev/sdb1
 
-3️⃣ After creating a new partition, how do you format it with the ext4 filesystem?
+## 4️⃣ How do you mount a partition (e.g., /dev/sdb1) permanently to /data directory?
+For permanent mount we have to make a entry in /etc/fstab file
 
-4️⃣ How do you mount a partition (e.g., /dev/sdb1) permanently to /data directory?
+/dev/sdb1   /data   ext4    defaults    0   0
 
 5️⃣ How do you check disk space usage for all mounted filesystems?
 
