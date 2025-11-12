@@ -324,7 +324,10 @@ rpm -q <package-name>
 yum installed list | grep `<package-name>`
 ## 3. How do you find which package provides a specific file (for example, /usr/bin/ls)?
 
-4. What’s the difference between yum install and yum localinstall?
+## 4. What’s the difference between yum install and yum localinstall?
+yum install → Installs from repository.
+
+yum localinstall → Installs a local .rpm file and fetches dependencies from repos.
 
 5. How do you list all installed packages and filter by a specific keyword?
 
