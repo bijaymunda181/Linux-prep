@@ -331,7 +331,7 @@ yum localinstall → Installs a local .rpm file and fetches dependencies from re
 
 5. How do you list all installed packages and filter by a specific keyword?
 
-6. What command do you use to remove a package and its dependencies?
+## 6. What command do you use to remove a package and its dependencies?
    yum remove <pakage-name>
 
 8. How does dnf differ from yum?
