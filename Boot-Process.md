@@ -37,4 +37,12 @@ Then handover control to the first sector of bootable device i.e; MBR
 - To bring the system to the run level (0-6).
 
 
+## Questions From Boot Process.
+1. What is GNU GRUB?
+   GRUB is a bootloader used in Linux systems.
+- Its responsibilities are:
+  - Load Linux kernel into memory
+  - Load initramfs
+  - Provide boot menu
+  - Pass control to kernel
 
