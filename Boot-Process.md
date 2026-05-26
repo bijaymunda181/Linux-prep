@@ -23,3 +23,11 @@ Then handover control to the first sector of bootable device i.e; MBR
 - At this stage , user can see GUI asking for different OS or Kernels configured to boot.
 - Main job is to load the Kernel and initrd/initramfs images into memory.
 - Once load the kernel into memory , it passes control to it.
+
+**4. KERNEL:**
+- First kernel loaded into read-only-mode.
+- Initrd/Initramfs get decompressed and then it load the temporary file system.
+- Initrd then detect and load the drivers from temporary file system to actual filesystem.
+- mount the other partition like LVM, RAID, etc and unmount itself.
+- Once filesystem is mounted , kernel initialize the first process init/systemd.
+
