@@ -41,7 +41,7 @@ Then handover control to the first sector of bootable device i.e; MBR
 
 
 ## Questions From Boot Process.
-1. What is GNU GRUB?
+1. What is GNU GRUB?</br>
    GRUB is a bootloader used in Linux systems.
 - Its responsibilities are:
   - Load Linux kernel into memory
@@ -49,7 +49,7 @@ Then handover control to the first sector of bootable device i.e; MBR
   - Provide boot menu
   - Pass control to kernel
 
-2. What is initramfs?
+2. What is initramfs?</br>
 initramfs is a temporary root filesystem loaded into RAM during boot.
 - Purpose:
   - Load essential drivers/modules
