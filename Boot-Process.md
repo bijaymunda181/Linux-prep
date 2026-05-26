@@ -49,3 +49,10 @@ Then handover control to the first sector of bootable device i.e; MBR
   - Provide boot menu
   - Pass control to kernel
 
+2. What is initramfs?
+initramfs is a temporary root filesystem loaded into RAM during boot.
+- Purpose:
+  - Load essential drivers/modules
+  - Detect storage devices
+  - Mount actual root filesystem
+  - Help kernel complete booting
