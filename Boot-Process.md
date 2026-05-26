@@ -31,3 +31,10 @@ Then handover control to the first sector of bootable device i.e; MBR
 - mount the other partition like LVM, RAID, etc and unmount itself.
 - Once filesystem is mounted , kernel initialize the first process init/systemd.
 
+5. SystemD:
+- First service loaded with PID-1.
+- Starts all required process /etc/systemd/system/default.target
+- To bring the system to the run level (0-6).
+
+
+
