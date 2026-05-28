@@ -30,7 +30,7 @@ mkfs.ext4 /dev/md0
 mkdir /mnt/raid1
 
 **Step 5 — Mount RAID Array**</br>
-mount /dev/md0 /mnt/raid
+mount /dev/md0 /mnt/raid1
 
 **Step 6 —Verify RAID Status**</br>
 mdadm --detail /dev/md0
