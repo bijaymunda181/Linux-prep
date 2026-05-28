@@ -93,3 +93,12 @@ initramfs is a temporary root filesystem loaded into RAM during boot.
    - Hardware failure
    - Wrong kernel modules
    - Invalid root filesystem
+
+7. What Happens After Kernel Loads?
+   After the kernel loads:
+    - It initializes hardware
+    - Loads drivers
+    - Mounts root filesystem
+    - Starts init/systemd process as PID 1
+
+Then systemd starts services and completes boot process.
