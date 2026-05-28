@@ -68,7 +68,8 @@ initramfs is a temporary root filesystem loaded into RAM during boot.
 
 4. What is systemd?</br>
    systemd is the init system and service manager in modern Linux distributions.</br>
-   It:
+
+**It:**
    - Starts services
    - Manages processes
    - Handles boot targets
