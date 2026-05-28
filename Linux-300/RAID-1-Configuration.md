@@ -8,7 +8,7 @@ This project demonstrates how to create and manage a RAID 1 (Mirroring) array in
 - Protects against single disk failure
 
 **Architecture**</br>
-![img_1.png](img_1.png)
+![img_1.png](img_1.png) ![img_2.png](img_2.png)
 
 **Step 1 — Install mdadm**</br>
 yum install mdadm -y
