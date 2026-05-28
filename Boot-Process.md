@@ -56,3 +56,15 @@ initramfs is a temporary root filesystem loaded into RAM during boot.
   - Detect storage devices
   - Mount actual root filesystem
   - Help kernel complete booting
+
+3. Difference Between BIOS and UEFI ? </br>
+   | BIOS             | UEFI                     |
+   | ---------------- | ------------------------ |
+   | Older firmware   | Modern firmware          |
+   | Uses MBR         | Uses GPT                 |
+   | Slower           | Faster                   |
+   | Limited features | Supports Secure Boot     |
+   | Text interface   | Better graphical support |
+
+4. 
+
