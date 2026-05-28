@@ -116,3 +116,11 @@ Then systemd starts services and completes boot process.
    - Fix fstab issues
    - Repair filesystem
    - Recover GRUB
+
+9. How Do You Recover GRUB?</br>
+* Boot using rescue/live ISO.
+* Mount root partition.
+* Chroot into installed system.
+* Reinstall GRUB.
+* Regenerate GRUB config.
+* Reboot system.
