@@ -13,7 +13,7 @@ RAID is a technology that combine multiple physical storage devices into a singl
 - Advantage:- If 1 disk failed we can recover the data from another disk.
 - Disadvantage:- If two disk fail we cannot recover the data.
 
-**RAID-5: (Striping+Parity)**
+**RAID-5: (Striping+Parity)**</br>
 - Performance:- Reading and writing is very fast so its provide high performance.
 - How it Works:- It is used stripping and Parity .
 - Advantage :- If one disk is failed we can recover the data using remaining disk and parity.
