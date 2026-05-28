@@ -103,13 +103,15 @@ initramfs is a temporary root filesystem loaded into RAM during boot.
 
 Then systemd starts services and completes boot process.
 
-8. What is Rescue Mode?
+8. What is Rescue Mode?</br>
    Rescue mode is a special troubleshooting mode used when the system cannot boot normally.</br>
-   Features:
+   **Features:**
    - Minimal services start
    - Single-user environment
    - Used for repair and recovery</br>
-     Common uses:
+    
+   
+**Common uses:**
    - Reset root password
    - Fix fstab issues
    - Repair filesystem
