@@ -10,10 +10,10 @@ This project demonstrates how to create and manage a RAID 1 (Mirroring) array in
 **Architecture**</br>
 ![img_1.png](img_1.png)
 
-**Step 1 — Install mdadm**
+**Step 1 — Install mdadm**</br>
 yum install mdadm -y
 
-**Step 2 — Create RAID 1 Array**
+**Step 2 — Create RAID 1 Array**</br>
 mdadm -C -v /dev/md0 -l 1 -n 2 /dev/sda /dev/sdb
 | Option     | Meaning          |
 | ---------- | ---------------- |
@@ -23,16 +23,16 @@ mdadm -C -v /dev/md0 -l 1 -n 2 /dev/sda /dev/sdb
 | `-l 1`     | RAID level 1     |
 | `-n 2`     | Number of disks  |
 
-**Step 3 — Create Filesystem**
+**Step 3 — Create Filesystem**</br>
 mkfs.ext4 /dev/md0
 
-**Step 4 — Create Mount Point**
+**Step 4 — Create Mount Point**</br>
 mkdir /mnt/raid1
 
-**Step 5 — Mount RAID Array**
+**Step 5 — Mount RAID Array**</br>
 mount /dev/md0 /mnt/raid
 
-**Step 6 —Verify RAID Status**
+**Step 6 —Verify RAID Status**</br>
 mdadm --detail /dev/md0
 
 **
