@@ -84,3 +84,12 @@ initramfs is a temporary root filesystem loaded into RAM during boot.
    - Rebuild initramfs if corrupted.
    - Reinstall/recover GRUB if needed.
    - Check logs using journalctl and dmesg.
+
+6. What is Kernel Panic?</br>
+   Kernel panic is a critical error where the Linux kernel cannot continue operating safely.</br>
+   Common causes:
+   - Corrupted filesystem
+   - Missing initramfs
+   - Hardware failure
+   - Wrong kernel modules
+   - Invalid root filesystem
