@@ -76,11 +76,11 @@ initramfs is a temporary root filesystem loaded into RAM during boot.
    - Controls system startup/shutdown
 
 5. How Do You Troubleshoot Boot Failure?</br>
-   - 1. Check error message on screen.
-   - 2. Boot using older kernel from GRUB.
-   - 3. Boot into rescue/emergency mode.
-   - 4. Check /etc/fstab entries.
-   - 5. Verify disk and filesystem.
-   - 6. Rebuild initramfs if corrupted.
-   - 7. Reinstall/recover GRUB if needed.
-   - 8. Check logs using journalctl and dmesg.
+   - Check error message on screen.
+   - Boot using older kernel from GRUB.
+   - Boot into rescue/emergency mode.
+   - Check /etc/fstab entries.
+   - Verify disk and filesystem.
+   - Rebuild initramfs if corrupted.
+   - Reinstall/recover GRUB if needed.
+   - Check logs using journalctl and dmesg.
