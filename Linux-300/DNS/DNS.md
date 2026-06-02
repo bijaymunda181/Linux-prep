@@ -16,3 +16,9 @@ The server who is responsible for translate the hostname to IP And IP to Hostnam
 webprod = Hostname </br>
 learntechnology.online = Domain name</br>
 
+## Important Files 
+- /etc/resolve.conf :- The /etc/resolv.conf file is used to configure which DNS servers your Linux system will use to resolve domain names into IP addresses.</br>
+- /etc/hosts :- The /etc/hosts file is used for local hostname resolution. It maps hostnames to IP addresses without contacting a DNS server.</br>
+- /etc/named.conf :- The /etc/named.conf file is the main configuration file for the DNS server software BIND (also called named).</br>
+- 
+
