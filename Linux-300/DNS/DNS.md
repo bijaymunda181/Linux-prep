@@ -12,4 +12,7 @@ The server who is responsible for translate the hostname to IP And IP to Hostnam
 
 **Domain :-** A Domain name is the human-readable name of a website that points to an IP address.</br>
 
+**Example :** webprod.learntechnology.online
+webprod = Hostname </br>
+learntechnology.online = Domain name</br>
 
