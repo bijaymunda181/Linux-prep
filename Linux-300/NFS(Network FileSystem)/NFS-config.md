@@ -44,4 +44,4 @@
 **Edit:**</br>
    sudo vi /etc/fstab</br>
 **Add:**</br>
-   192.168.1.10:/nfs-share /mnt/nfs nfs defaults,_netdev 0 0
+   192.168.100.163:/mnt/nfs-share /mnt/nfs nfs defaults,_netdev 0 0
