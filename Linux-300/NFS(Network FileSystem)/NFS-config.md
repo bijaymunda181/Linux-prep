@@ -47,7 +47,7 @@
    192.168.100.163:/mnt/nfs-share /mnt/nfs nfs defaults,_netdev 0 0
 
 ## Interview Questions
-**Q1: What is NFS?**
+**Q1: What is NFS?**</br>
 Nfs stands for Network File System , It is a shared file system that uses for share files between linux to linux machine.</br>
 **Q2: Which configuration file is used for NFS exports?**</br>
 /etc/exports</br>
