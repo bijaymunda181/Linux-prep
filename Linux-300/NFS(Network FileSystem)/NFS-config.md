@@ -30,3 +30,18 @@
 **Expected output:**</br>
    Export list for localhost</br>
    /nfs-share 192.168.100.165 </br>
+
+## NFS Client Configuration
+1. **Install NFS client package**</br>
+   sudo yum install -y nfs-utils</br>
+2. **Create mount point**</br>
+   sudo mkdir /mnt/nfs</br>
+3. **Mount NFS share**</br>
+   sudo mount -t nfs 192.168.100.163:/mnt/nfs-share /mnt/nfs</br>
+4. **Verify**</br>
+   df -h</br>
+5. **Permanent Mount**</br>
+**Edit:**</br>
+   sudo vi /etc/fstab</br>
+**Add:**</br>
+   192.168.1.10:/nfs-share /mnt/nfs nfs defaults,_netdev 0 0
