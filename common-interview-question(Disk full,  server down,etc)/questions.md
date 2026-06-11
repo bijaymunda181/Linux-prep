@@ -97,3 +97,56 @@ If the Disk is Full, first I will check which disk is full or nearby full by usi
 8. If memory utilization remains consistently high due to workload growth, I will recommend increasing RAM or scaling the application after following the change management process.
 
 9. Finally, I will continue monitoring the server to ensure memory usage returns to normal and all services are working properly.
+
+## 5. How to resolve NFS mount issue ?
+**If an NFS mount is not working, I will follow these troubleshooting steps:**
+
+1. Verify network connectivity between the NFS client and server:
+
+   ```bash
+   ping <NFS_Server_IP>
+   ```
+
+2. Check whether the NFS server is reachable and the required ports are open:
+
+   ```bash
+   rpcinfo -p <NFS_Server_IP>
+   showmount -e <NFS_Server_IP>
+   ```
+
+3. Verify that NFS services are running on the server:
+
+   ```bash
+   systemctl status nfs-server
+   systemctl status rpcbind
+   ```
+
+4. Check the exported shares on the NFS server:
+
+   ```bash
+   cat /etc/exports
+   exportfs -v
+   ```
+
+5. Verify that the client IP or subnet has permission in the `/etc/exports` file.
+
+6. Check firewall rules on both the NFS server and client:
+
+   ```bash
+   firewall-cmd --list-all
+   ```
+
+7. Attempt the mount manually and check for errors:
+
+   ```bash
+   mount -t nfs <NFS_Server_IP>:/nfs-share /mnt
+   ```
+
+8. Review logs on both the client and server:
+
+   ```bash
+   journalctl -xe
+   dmesg
+   ```
+
+9. If the issue persists, verify DNS resolution, SELinux settings (if enabled), and NFS version compatibility.
