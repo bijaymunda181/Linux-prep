@@ -53,3 +53,47 @@ If the Disk is Full, first I will check which disk is full or nearby full by usi
 8. If the CPU usage remains consistently high due to increased business requirements, I will recommend scaling the application or upgrading the server resources through the proper change management process.
 
 9. Finally, I will monitor the server to ensure CPU utilization returns to normal and that all services are functioning correctly.
+
+## 4. How to resolve High Memory Uses ?
+**If memory utilization is high, I will follow these troubleshooting steps:**
+
+1. First, I will verify memory usage using:
+
+   ```bash
+   free -h
+   top
+   htop
+   vmstat 1
+   ```
+
+2. I will identify the processes consuming the most memory:
+
+   ```bash
+   ps -eo pid,ppid,cmd,%mem --sort=-%mem | head
+   ```
+
+3. I will determine whether the memory usage is caused by an application process, a system process, or a memory leak.
+
+4. If the process belongs to an application, I will coordinate with the Application Team for further investigation.
+
+5. If a service is consuming excessive memory due to a temporary issue, I will restart the service after obtaining the required approval.
+
+6. I will check swap usage:
+
+   ```bash
+   free -h
+   swapon --show
+   ```
+
+   High swap usage may indicate memory pressure.
+
+7. I will review system logs for Out of Memory (OOM) events:
+
+   ```bash
+   dmesg | grep -i oom
+   journalctl -xe
+   ```
+
+8. If memory utilization remains consistently high due to workload growth, I will recommend increasing RAM or scaling the application after following the change management process.
+
+9. Finally, I will continue monitoring the server to ensure memory usage returns to normal and all services are working properly.
