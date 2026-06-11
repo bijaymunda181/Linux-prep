@@ -150,3 +150,10 @@ If the Disk is Full, first I will check which disk is full or nearby full by usi
    ```
 
 9. If the issue persists, verify DNS resolution, SELinux settings (if enabled), and NFS version compatibility.
+
+## 6. SSH service is not working, How would you resolve the issue ?
+If SSH is not working:
+1. Check network connectivity to the server:
+   ```bash
+   ping <server_ip>
+   ```
