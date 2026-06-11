@@ -167,3 +167,8 @@ If SSH is not working:
    systemctl start sshd
    systemctl enable sshd 
    ```
+   
+4. Check whether port 22 is listening:
+   ```bash
+   ss -tulnp | grep :22
+   ```
