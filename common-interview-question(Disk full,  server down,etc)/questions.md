@@ -162,3 +162,8 @@ If SSH is not working:
    ```bash 
    systemctl status sshd
    ```
+3. If the service is stopped, start and enable it:
+```bash
+systemctl start sshd
+systemctl enable sshd 
+```
