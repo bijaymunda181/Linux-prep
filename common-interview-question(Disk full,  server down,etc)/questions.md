@@ -173,3 +173,34 @@ If SSH is not working:
    ss -tulnp | grep :22
    netstat -tulnp | grep :22
    ```
+   
+5. Check firewall rules:
+   ```bash
+   firewall-cmd --list-all
+   ```
+Ensure port 22 is allowed.   
+
+6. Verify SELinux settings (if enabled):
+   ```bash
+    getenforce
+   ```
+   
+7. Check the SSH configuration file for errors:
+   ```bash
+   /etc/ssh/sshd_config
+   ```
+   
+8. Review logs for errors:
+   ```bash
+   journalctl -u sshd
+   ```
+   or
+   ```bash
+   tail -f /var/log/secure
+   ```
+   
+9. Check disk space:
+   ```bash
+   df -h
+   ```
+   If the root filesystem is full, SSH may fail to start or users may not be able to log in.
