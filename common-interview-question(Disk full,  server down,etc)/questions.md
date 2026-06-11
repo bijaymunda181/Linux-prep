@@ -157,3 +157,8 @@ If SSH is not working:
    ```bash
    ping <server_ip>
    ```
+
+2. Verify that the SSH service is running:
+   ```bash 
+   systemctl status sshd
+   ```
